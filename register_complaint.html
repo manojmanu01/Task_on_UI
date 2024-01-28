@@ -5,25 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>redister complaint</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="db.js"></script>
+    <script src="register.js"></script>
   </head>
   <body>
     <div class="routcontainer">
       <form
         class="rform"
         id="rform"
-        action=""
-        method="get"
-        onsubmit="addData(event)"
       >
-        <div class="">
+        <div>
           <div class="heading">File new Complaint</div>
           <div class="regcontainer">
             <div>Complaint/Service Type:</div>
             <select name="" id="complaint" required>
-              <option value="">
-                <Select:disabled>Select Complaint Type</Select:disabled>
-              </option>
+              <option selected disabled value="">Select Complaint Type</option>
               <option value="Billing related">Billing related</option>
               <option value="Voltage related">Voltage related</option>
               <option value="Frequent disruption">Frequent disruption</option>
@@ -31,14 +27,8 @@
               <option value="pole related">pole related</option>
             </select>
             Category:
-            <select name="" id="cat" required>
-              <option value="">
-                <Select:disabled>Select Category</Select:disabled>
-              </option>
-              <option value="A">V</option>
-              <option value="B">S</option>
-              <option value="C">M</option>
-              <option value="D">A</option>
+            <select id="dynamic-categories" name="" id="cat" required>
+              <option selected disabled value="">Select Category</option>
             </select>
             Contact person:
             <input type="text" placeholder="" id="contact" required />

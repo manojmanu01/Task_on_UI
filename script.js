@@ -1,7 +1,6 @@
 let db;
 const dbName = "myDatabase";
 const dbVersion = 1;
-const uniqueId = new Date().getTime();
 
 const request = indexedDB.open(dbName, dbVersion);
 
@@ -91,6 +90,7 @@ function getData(event) {
 
   const request = objectStore.get(parseInt(rawdata));
   request.onsuccess = () => {
+    if(!Boolean(request.result)) return alert("not found."); 
     wrapper = document.createElement("div");
     wrapper.className = "wrapper";
     idInfo = document.createElement("div");

@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Check Your Complaint Status</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="db.js"></script>
+    <script src="check_complaint.js"></script>
   </head>
   <body>
     <div class="out">
       <div class="box">
         <div class="test">Check Your Complaint Status here</div>
-        <form onsubmit="getValid(event)">
+        <form id="check_form">
           <div class="container">
             <div>Enter Complaint Number :</div>
             <input type="text" class="checkInput" required />
