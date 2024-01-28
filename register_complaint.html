@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>redister complaint</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="routcontainer">
+      <form
+        class="rform"
+        id="rform"
+        action=""
+        method="get"
+        onsubmit="addData(event)"
+      >
+        <div class="">
+          <div class="heading">File new Complaint</div>
+          <div class="regcontainer">
+            <div>Complaint/Service Type:</div>
+            <select name="" id="complaint" required>
+              <option value="">
+                <Select:disabled>Select Complaint Type</Select:disabled>
+              </option>
+              <option value="Billing related">Billing related</option>
+              <option value="Voltage related">Voltage related</option>
+              <option value="Frequent disruption">Frequent disruption</option>
+              <option value="street light related">street light related</option>
+              <option value="pole related">pole related</option>
+            </select>
+            Category:
+            <select name="" id="cat" required>
+              <option value="">
+                <Select:disabled>Select Category</Select:disabled>
+              </option>
+              <option value="A">V</option>
+              <option value="B">S</option>
+              <option value="C">M</option>
+              <option value="D">A</option>
+            </select>
+            Contact person:
+            <input type="text" placeholder="" id="contact" required />
+            Landmark:
+            <input
+              type="text"
+              placeholder="Enter landmark"
+              id="landmark"
+              required
+            />
+            Consumer Number:
+            <input
+              type="text"
+              placeholder="Enter Consumer Number"
+              id="consumerNumber"
+              required
+            />
+
+            Problem discription:
+            <textarea
+              placeholder="Breif the problem..."
+              class=""
+              id="problemdiscription"
+              rows="3"
+              required
+            ></textarea>
+
+            Mobile Number:
+            <input
+              type="text"
+              id="mobileNumber"
+              name="phone"
+              placeholder="Enter Mobile Number"
+              required
+            />
+            Address:
+            <textarea
+              placeholder="Enter Address..."
+              class=""
+              id="address"
+              rows="3"
+              required
+            ></textarea>
+
+            <input type="submit" class="button tu" value="submit" />
+            <input type="reset" class="button tx" value="cancel" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
