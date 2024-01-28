@@ -10,10 +10,7 @@
   </head>
   <body>
     <div class="routcontainer">
-      <form
-        class="rform"
-        id="rform"
-      >
+      <form class="rform" id="rform">
         <div>
           <div class="heading">File new Complaint</div>
           <div class="regcontainer">
@@ -27,7 +24,7 @@
               <option value="pole related">pole related</option>
             </select>
             Category:
-            <select id="dynamic-categories" name="" id="cat" required>
+            <select id="dynamic-categories" name="" required>
               <option selected disabled value="">Select Category</option>
             </select>
             Contact person:
@@ -62,6 +59,8 @@
               id="mobileNumber"
               name="phone"
               placeholder="Enter Mobile Number"
+              minlength="10"
+              maxlength="10"
               required
             />
             Address:
