@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>redister complaint</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbarDesign.css" />
+    <script src="db.js"></script>
+    <script src="FileComplaintJS.js"></script>
+  </head>
+
+  <body onload="con()">
+    <div class="topnav">
+      <a href="">HOME</a>
+      <a href="">PAY BILL</a>
+      <a href="FileComplaint.html">REGISTER COMPLAINT</a>
+      <a href="CheckComplaint.html">COMPLAINT STATUS</a>
+    </div>
+    <div class="secondnav">
+      <p style="font-size: 18px">
+        <b>Welcome:</b><label id="custname"></label>
+        <a href="Index.html"
+          ><button class="logoutbutton" type="button">LOGOUT</button></a
+        >
+      </p>
+    </div>
+    <script>
+      function con() {
+        document.querySelector("#consumerNumber").value =
+          sessionStorage.getItem("connum");
+      }
+      document.querySelector("#custname").innerHTML =
+        sessionStorage.getItem("name");
+    </script>
+
+    <div class="routcontainer">
+      <form class="rform" id="rform">
+        <div>
+          <div class="heading">File new Complaint</div>
+          <div class="regcontainer">
+            <div>Complaint/Service Type:</div>
+            <select name="" id="complaint" required>
+              <option selected disabled value="">Select Complaint Type</option>
+              <option value="Billing related">Billing related</option>
+              <option value="Voltage related">Voltage related</option>
+              <option value="Frequent disruption">Frequent disruption</option>
+              <option value="street light related">street light related</option>
+              <option value="pole related">pole related</option>
+            </select>
+            Category:
+            <select id="dynamic-categories" name="" required>
+              <option selected disabled value="">Select Category</option>
+            </select>
+            Contact person:
+            <input type="text" placeholder="" id="contact" required />
+            Landmark:
+            <input
+              type="text"
+              placeholder="Enter landmark"
+              id="landmark"
+              required
+            />
+            Consumer Number:
+            <input
+              type="text"
+              placeholder="Enter Consumer Number"
+              id="consumerNumber"
+              readonly
+              required
+            />
+
+            Problem discription:
+            <textarea
+              placeholder="Brief the problem..."
+              class=""
+              id="problemdiscription"
+              rows="3"
+              required
+            ></textarea>
+
+            Mobile Number:
+            <input
+              type="number"
+              id="mobileNumber"
+              name="phone"
+              placeholder="Enter Mobile Number"
+              onKeyPress="if(this.value.length==10) return false;"
+              required
+            />
+            Address:
+            <textarea
+              placeholder="Enter Address..."
+              class=""
+              id="address"
+              rows="3"
+              required
+            ></textarea>
+
+            <input type="submit" class="button tu" value="submit" />
+            <input type="reset" class="button tx" value="cancel" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register complaint</title>
+    <link rel="stylesheet" href="styles.css" />
+<script>
+function getD(){
+document.querySelector("#ucid").innerHTML=sessionStorage.getItem("UniqID");
+}
+</script>
+  </head>
+  <body style="height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;" onload="getD()">
+    <div class="routcontainer">
+      <form class="rform" id="rform">
+        <div style="    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;">
+          <div class="heading">Complaint Number </div>
+		<label id="ucid"></label><br>
+            <button class="button tu" style="margin-top:-5%" /><a class="" style="    color: white;
+    text-decoration: none;" href="navbar.html">Home</a></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Your Complaint Status</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbarDesign.css" />
+    <script src="db.js"></script>
+    <script src="CheckComplaintJS.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="">HOME</a>
+      <a href="">PAY BILL</a>
+      <a href="FileComplaint.html">REGISTER COMPLAINT</a>
+      <a href="CheckComplaint.html">COMPLAINT STATUS</a>
+    </div>
+    <div class="secondnav">
+      <p style="font-size: 18px">
+        <b>Welcome:</b><label id="custname"></label>
+        <a href="Index.html"
+          ><button class="logoutbutton" type="button">LOGOUT</button></a
+        >
+      </p>
+    </div>
+    <script>
+      function con() {
+        document.querySelector("#consumerNumber").value =
+          sessionStorage.getItem("connum");
+      }
+      document.querySelector("#custname").innerHTML =
+        sessionStorage.getItem("name");
+    </script>
+
+    <div class="out">
+      <div class="box">
+        <div class="test">Check Your Complaint Status here</div>
+        <form id="check_form">
+          <div class="container">
+            <div>Enter Complaint Number :</div>
+            <input type="text" class="checkInput" required />
+          </div>
+          <div class="button-container">
+            <button class="button" type="submit">Get Complaint Status</button>
+            <button class="button" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+      <div class="display"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  background-image: url(street.png);
+  background-size: cover;
+  background-position: center;
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(20 19 19);
+  backdrop-filter: blur(8px);
+}
+
+.bu {
+  width: auto;
+  border: #0d1815;
+  height: auto;
+  text-decoration: none;
+  color: white;
+  padding: 9px;
+  background: radial-gradient(#0e0e0e, #9d531b05);
+}
